@@ -12,3 +12,8 @@
 - 보드 1 업로드 성공 및 쓰기 해시 검증. BOOT 버튼 조작 필요 없음. ESP32-D0WD-V3 revision v3.1, MAC 48:9d:31:04:5d:fc.
 - 제공한 스크립트로 115200 baud, 8초 로그 확인: PocketHiFi boot / chip rev 3, cores 2, flash 4 MB / free heap 351548 bytes / alive 3회. 리셋 초기에 깨진 데이터가 있으나 이후 앱 로그 정상. 원본 로그 및 정상 부팅 구간은 logs/에 보존.
 - 사용자에게 여분 보드 교체를 요청함. 완료 답변 전 보드 2 업로드 실행하지 않음.
+- 보드 1 통과 후 F1 boot log 커밋 f0978f7 생성, f1 태그 부여.
+- 사용자가 “여분 보드로 교체 완료”라고 답변. 포트 및 USB 칩 재확인: /dev/cu.usbserial-0001, CP2102 VID 0x10c4 / PID 0xea60.
+- 보드 2 업로드 성공 및 쓰기 해시 검증. BOOT 버튼 조작 필요 없음. MAC 48:9d:31:04:5a:4c (보드 1과 다름).
+- 보드 2 8초 로그 검증 통과: chip rev 3 / cores 2 / flash 4 MB / free heap 351548 / alive 3회. S1 두 보드 검증 완료.
+- 원본 로그와 정상 앱 부팅 구간을 각각 보존. Claude Code 인수인계 파일에 최종 상태 반영.

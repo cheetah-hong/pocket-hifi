@@ -6,10 +6,15 @@
 - 보드 1 포트: /dev/cu.usbserial-0001. 보드를 교체하면 포트를 다시 확인한다.
 - macOS 26.3.1, Apple Silicon (arm64), PlatformIO Core 6.2.0, Git 2.50.1.
 - 보드 단독 테스트. 외부 부품이나 핀 배선 없음.
-- 보드 1 S1 빌드·업로드·부팅 검증 통과. BOOT 버튼 조작 필요 없음. 여분 보드 검증은 사용자 교체 답변 대기.
+- 두 보드 모두 S1 빌드·업로드·부팅 검증 통과. BOOT 버튼 조작 필요 없음.
+- 현재 연결된 보드 2도 CP2102 (VID 0x10c4 / PID 0xea60), 포트 /dev/cu.usbserial-0001.
+- 보드 1 MAC 48:9d:31:04:5d:fc, 보드 2 MAC 48:9d:31:04:5a:4c.
 - 업로드로 확인한 칩: ESP32-D0WD-V3 revision v3.1, 2코어, 플래시 4 MB. 앱 여유 힙 351,548 bytes.
 - 확인한 칩 정보만으로 모듈의 WROOM-32D 표기를 확정하지는 않았다.
-- logs/board1-serial-raw.log에 원본 로그, logs/board1-boot.log에 정상 앱 부팅 구간을 보존했다.
+- logs/board1-serial-raw.log 및 logs/board2-serial-raw.log에 원본 로그를, logs/board1-boot.log 및 logs/board2-boot.log에 정상 앱 부팅 구간을 보존했다.
+- 두 보드 모두 리셋 직후 깨진 문자가 있었으나 115200 baud에서 앱 부팅 이후 출력은 정상이다.
+- 첫 설치 중 sin1.contabostorage.com DNS 실패가 발생했으나 공식 대체 미러와 SHA-256 검증으로 설치를 완료했다. 이미 설치된 도구로 터미널 빌드·업로드·로그 확인이 가능하다.
+- f1 태그는 보드 1 최초 통과 커밋에 있다. 여분 보드 검증과 최종 인수인계는 후속 커밋에 있다. 다음 개발 단계는 f2부터 진행한다.
 
 ## 터미널 명령
 프로젝트 위치: ~/Projects/pocket-hifi
