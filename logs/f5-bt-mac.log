@@ -1,0 +1,515 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13232
+load:0x40080400,len:3028
+entry 0x400805e4
+PocketHiFi F5 bluetooth test
+[   668][I][BluetoothA2DPCommon.cpp:374] log_free_heap(): [BT_AV] Available Heap: 214812
+[   677][I][BluetoothA2DPSink.cpp:175] start(): [BT_AV] Device name will be set to 'PocketHiFi'
+[   686][I][BluetoothA2DPSink.cpp:232] init_i2s(): [BT_AV] init_i2s
+[   774][I][BluetoothA2DPSink.cpp:339] init_bluetooth(): [BT_AV] controller initialized
+[  1095][I][BluetoothA2DPSink.cpp:349] init_bluetooth(): [BT_AV] bluedroid initialized
+[  1200][I][BluetoothA2DPSink.cpp:358] init_bluetooth(): [BT_AV] bluedroid enabled
+[  1207][I][BluetoothA2DPCommon.cpp:513] app_task_handler(): [BT_AV] app_task_handler
+[  1215][I][BluetoothA2DPSink.cpp:1230] av_hdl_stack_evt(): [BT_AV] stack_up: registering decoded data callback
+[  1216][I][BluetoothA2DPSink.cpp:513] app_gap_callback(): [BT_AV] event: 10
+[  1232][I][BluetoothA2DPCommon.cpp:586] set_scan_mode_connectable(): [BT_AV] set_scan_mode_connectable true
+[  1242][I][BluetoothA2DPSink.cpp:614] av_hdl_a2d_evt(): [BT_AV] A2DP PROF STATE: Init Compl
+
+[  1242][I][BluetoothA2DPSink.cpp:513] app_gap_callback(): [BT_AV] event: 10
+[  1257][I][BluetoothA2DPSink.cpp:513] app_gap_callback(): [BT_AV] event: 10
+[  1258][I][BluetoothA2DPSink.cpp:227] start(): [BT_AV] IDF Version 4.4
+[  1271][I][BluetoothA2DPSink.cpp:513] app_gap_callback(): [BT_AV] event: 10
+[  1271][I][BluetoothA2DPCommon.cpp:374] log_free_heap(): [BT_AV] Available Heap: 113088
+[F5] 'PocketHiFi' 광고 시작, free heap 129596
+[ 34320][I][BluetoothA2DPSink.cpp:513] app_gap_callback(): [BT_AV] event: 16
+[ 34576][I][BluetoothA2DPSink.cpp:862] handle_connection_state(): [BT_AV] partner address: 5c:9b:a6:83:ea:bd
+[ 34586][I][BluetoothA2DPSink.cpp:865] handle_connection_state(): [BT_AV] A2DP connection state: Connecting, [5c:9b:a6:83:ea:bd]
+[ 34598][I][BluetoothA2DPSink.cpp:926] handle_connection_state(): [BT_AV] ESP_A2D_CONNECTION_STATE_CONNECTING
+[F5] 연결 상태: Connecting
+[ 34639][I][BluetoothA2DPSink.cpp:1546] av_hdl_avrc_tg_evt(): [BT_AV] AVRC conn_state evt: state 1, [5c:9b:a6:83:ea:bd]
+[ 34652][I][BluetoothA2DPSink.cpp:696] handle_audio_cfg(): [BT_AV] a2dp audio_cfg_cb , codec type 0
+[ 34661][I][BluetoothA2DPSink.cpp:677] parse_sbc_audio_cfg(): [BT_AV] configure audio player 21-15-2-35
+[ 34670][I][BluetoothA2DPSink.cpp:685] apply_audio_info(): [BT_AV] audio info: sample_rate 44100, channels 2
+[ 34680][I][BluetoothA2DPOutput.cpp:164] set_sample_rate(): [BT_AV] set_sample_rate 44100
+E (34680) I2S: i2s_set_clk(1620): I2S0 has not installed yet
+[ 34689][E][BluetoothA2DPOutput.cpp:170] set_sample_rate(): [BT_AV] i2s_set_clk failed with samplerate=44100
+[ 34704][I][BluetoothA2DPSink.cpp:1565] av_hdl_avrc_tg_evt(): [BT_AV] AVRC register event notification: 13, param: 0x0
+[ 34715][I][BluetoothA2DPSink.cpp:1083] av_hdl_avrc_evt(): [BT_AV] AVRC conn_state evt: state 1, [5c:9b:a6:83:ea:bd]
+[ 34725][I][BluetoothA2DPSink.cpp:1132] av_hdl_avrc_evt(): [BT_AV] AVRC remote features 24b
+[ 34734][I][BluetoothA2DPSink.cpp:1582] av_hdl_avrc_tg_evt(): [BT_AV] AVRC remote features 24b, CT features 2
+[ 34743][I][BluetoothA2DPSink.cpp:862] handle_connection_state(): [BT_AV] partner address: 5c:9b:a6:83:ea:bd
+[ 34753][I][BluetoothA2DPSink.cpp:865] handle_connection_state(): [BT_AV] A2DP connection state: Connected, [5c:9b:a6:83:ea:bd]
+[ 34764][I][BluetoothA2DPSink.cpp:931] handle_connection_state(): [BT_AV] ESP_A2D_CONNECTION_STATE_CONNECTED
+[ 34774][I][BluetoothA2DPCommon.cpp:586] set_scan_mode_connectable(): [BT_AV] set_scan_mode_connectable false
+[F5] 연결 상태: Connected
+[ 34784][I][BluetoothA2DPSink.cpp:1132] av_hdl_avrc_evt(): [BT_AV] AVRC remote features 24b
+[ 34795][I][BluetoothA2DPSink.cpp:1582] av_hdl_avrc_tg_evt(): [BT_AV] AVRC remote features 24b, CT features 2
+[ 34805][I][BluetoothA2DPSink.cpp:1140] av_hdl_avrc_evt(): [BT_AV] remote rn_cap: count 7, bitmask 0x1f06
+[ 34810][I][BluetoothA2DPSink.cpp:494] app_gap_callback(): [BT_AV] ESP_BT_GAP_READ_REMOTE_NAME_EVT stat:0
+[ 34823][I][BluetoothA2DPSink.cpp:497] app_gap_callback(): [BT_AV] ESP_BT_GAP_READ_REMOTE_NAME_EVT remote name:Cheetah_Hong의 MacBook Pro
+[ 37904][I][BluetoothA2DPSink.cpp:507] app_gap_callback(): [BT_AV] ESP_BT_GAP_MODE_CHG_EVT
+[ 37913][I][BluetoothA2DPCommon.cpp:374] log_free_heap(): [BT_AV] Available Heap: 102956
+[ 41837][I][BluetoothA2DPSink.cpp:507] app_gap_callback(): [BT_AV] ESP_BT_GAP_MODE_CHG_EVT
+[ 41846][I][BluetoothA2DPCommon.cpp:374] log_free_heap(): [BT_AV] Available Heap: 102956
+[ 41864][I][BluetoothA2DPSink.cpp:779] handle_audio_state(): [BT_AV] A2DP audio state: Suspended
+[ 41873][I][BluetoothA2DPSink.cpp:840] set_i2s_active(): [BT_AV] set_i2s_active 1
+[F5] 수신 160 KB/s
+[F5] 수신 172 KB/s
+[ 44029][I][BluetoothA2DPSink.cpp:779] handle_audio_state(): [BT_AV] A2DP audio state: Suspended
+[F5] 수신 16 KB/s
+[ 47235][I][BluetoothA2DPSink.cpp:507] app_gap_callback(): [BT_AV] ESP_BT_GAP_MODE_CHG_EVT
+[ 47244][I][BluetoothA2DPCommon.cpp:374] log_free_heap(): [BT_AV] Available Heap: 102956
+[ 56951][I][BluetoothA2DPSink.cpp:507] app_gap_callback(): [BT_AV] ESP_BT_GAP_MODE_CHG_EVT
+[ 56959][I][BluetoothA2DPCommon.cpp:374] log_free_heap(): [BT_AV] Available Heap: 102956
+[ 56972][I][BluetoothA2DPSink.cpp:779] handle_audio_state(): [BT_AV] A2DP audio state: Suspended
+[ 56980][I][BluetoothA2DPSink.cpp:840] set_i2s_active(): [BT_AV] set_i2s_active 1
+[F5] 재생 상태: 재생
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 168 KB/s
+[F5] 수신 180 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 168 KB/s
+[F5] 재생 상태: 일시정지
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[ 77579][I][BluetoothA2DPSink.cpp:779] handle_audio_state(): [BT_AV] A2DP audio state: Suspended
+[F5] 수신 64 KB/s
+[ 80037][I][BluetoothA2DPSink.cpp:779] handle_audio_state(): [BT_AV] A2DP audio state: Suspended
+[ 80046][I][BluetoothA2DPSink.cpp:840] set_i2s_active(): [BT_AV] set_i2s_active 1
+[F5] 재생 상태: 재생
+[F5] 수신 20 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 168 KB/s
+[F5] 수신 180 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 168 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 168 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 180 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[153200][I][BluetoothA2DPSink.cpp:779] handle_audio_state(): [BT_AV] A2DP audio state: Suspended
+[F5] 수신 40 KB/s
+[156418][I][BluetoothA2DPSink.cpp:507] app_gap_callback(): [BT_AV] ESP_BT_GAP_MODE_CHG_EVT
+[156427][I][BluetoothA2DPCommon.cpp:374] log_free_heap(): [BT_AV] Available Heap: 102956
+[156936][I][BluetoothA2DPSink.cpp:507] app_gap_callback(): [BT_AV] ESP_BT_GAP_MODE_CHG_EVT
+[156948][I][BluetoothA2DPCommon.cpp:374] log_free_heap(): [BT_AV] Available Heap: 108572
+[156957][I][BluetoothA2DPSink.cpp:862] handle_connection_state(): [BT_AV] partner address: 5c:9b:a6:83:ea:bd
+[156957][I][BluetoothA2DPSink.cpp:507] app_gap_callback(): [BT_AV] ESP_BT_GAP_MODE_CHG_EVT
+[156975][I][BluetoothA2DPCommon.cpp:374] log_free_heap()[:1 5[6B9T7_5A]V[]I ]A[vBaliuletoothA2DPSink.acbplpe: 8H6e5a]p :h a1n0d8le_connection_state(): [BT_AV] A2DP connection state: Disconnected, [5c:9b:a6:83:ea:bd]
+[156994][I][BluetoothA2DPSink.cpp:875] handle_connection_state(): [BT_AV] ESP_A2D_CONNECTION_STATE_DISCONNECTED
+[157004][I][BluetoothA2DPCommon.cpp:586] set_scan_mode_connectable(): [BT_AV] set_scan_mode_connectable true
+[F5] 연결 상태: Disconnected
+[157014][I][BluetoothA2DPSink.cpp:1083] av_hdl_avrc_evt(): [BT_AV] AVRC conn_state evt: state 0, [00:00:00:00:00:00]
+[157027][I][BluetoothA2DPSink.cpp:1546] av_hdl_avrc_tg_evt(): [BT_AV] AVRC conn_state evt: state 0, [00:00:00:00:00:00]
+[159001][I][BluetoothA2DPSink.cpp:507] app_gap_callback(): [BT_AV] ESP_BT_GAP_MODE_CHG_EVT
+[159009][I][BluetoothA2DPCommon.cpp:374] log_free_heap(): [BT_AV] Available Heap: 108952
+[159091][I][BluetoothA2DPSink.cpp:513] app_gap_callback(): [BT_AV] event: 17
+[173279][I][BluetoothA2DPSink.cpp:513] app_gap_callback(): [BT_AV] event: 16
+[173770][I][BluetoothA2DPSink.cpp:431] app_gap_callback(): [BT_AV] authentication success: iPhone 13 mini의 김태홍의 김동준의 iPhone 13 mini
+[173943][I][BluetoothA2DPSink.cpp:862] handle_connection_state(): [BT_AV] partner address: 1c:71:25:75:5f:3f
+[173953][I][BluetoothA2DPSink.cpp:865] handle_connection_state(): [BT_AV] A2DP connection state: Connecting, [1c:71:25:75:5f:3f]
+[173965][I][BluetoothA2DPSink.cpp:926] handle_connection_state(): [BT_AV] ESP_A2D_CONNECTION_STATE_CONNECTING
+[F5] 연결 상태: Connecting
+[173975][I][BluetoothA2DPSink.cpp:1546] av_hdl_avrc_tg_evt(): [BT_AV] AVRC conn_state evt: state 1, [1c:71:25:75:5f:3f]
+[174099][I][BluetoothA2DPSink.cpp:1565] av_hdl_avrc_tg_evt(): [BT_AV] AVRC register event notification: 13, param: 0x0
+[174165][I][BluetoothA2DPSink.cpp:696] handle_audio_cfg(): [BT_AV] a2dp audio_cfg_cb , codec type 0
+[174174][I][BluetoothA2DPSink.cpp:677] parse_sbc_audio_cfg(): [BT_AV] configure audio player 21-15-2-35
+[174184][I][BluetoothA2DPSink.cpp:685] apply_audio_info(): [BT_AV] audio info: sample_rate 44100, channels 2
+[174193][I][BluetoothA2DPOutput.cpp:164] set_sample_rate(): [BT_AV] set_sample_rate 44100
+E (174193) I2S: i2s_set_clk(1620): I2S0 has not installed yet
+[174202][E][BluetoothA2DPOutput.cpp:170] set_sample_rate(): [BT_AV] i2s_set_clk failed with samplerate=44100
+[174277][I][BluetoothA2DPSink.cpp:1083] av_hdl_avrc_evt(): [BT_AV] AVRC conn_state evt: state 1, [1c:71:25:75:5f:3f]
+[174288][I][BluetoothA2DPSink.cpp:1132] av_hdl_avrc_evt(): [BT_AV] AVRC remote features 25b
+[174296][I][BluetoothA2DPSink.cpp:1582] av_hdl_avrc_tg_evt(): [BT_AV] AVRC remote features 25b, CT features 2
+[174357][I][BluetoothA2DPSink.cpp:1140] av_hdl_avrc_evt(): [BT_AV] remote rn_cap: count 7, bitmask 0x1f06
+[174433][I][BluetoothA2DPSink.cpp:862] handle_connection_state(): [BT_AV] partner address: 1c:71:25:75:5f:3f
+[174443][I][BluetoothA2DPSink.cpp:865] handle_connection_state(): [BT_AV] A2DP connection state: Connected, [1c:71:25:75:5f:3f]
+[174454][I][BluetoothA2DPSink.cpp:931] handle_connection_state(): [BT_AV] ESP_A2D_CONNECTION_STATE_CONNECTED
+[174464][I][BluetoothA2DPCommon.cpp:586] set_scan_mode_connectable(): [BT_AV] set_scan_mode_connectable false
+[F5] 연결 상태: Connected
+[174514][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x1,
+[F5] AVRCP 0x01:
+[174523][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x2,
+[F5] AVRCP 0x02:
+[174534][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x4,
+[F5] AVRCP 0x04:
+[174963][I][BluetoothA2DPSink.cpp:494] app_gap_callback(): [BT_AV] ESP_BT_GAP_READ_REMOTE_NAME_EVT stat:0
+[174973][I][BluetoothA2DPSink.cpp:497] app_gap_callback(): [BT_AV] ESP_BT_GAP_READ_REMOTE_NAME_EVT remote name:iPhone 13 mini의 김태홍의 김동준의 iPhone 13 mini
+[175096][I][BluetoothA2DPSink.cpp:1132] av_hdl_avrc_evt(): [BT_AV] AVRC remote features 25b
+[175104][I][BluetoothA2DPSink.cpp:1582] av_hdl_avrc_tg_evt(): [BT_AV] AVRC remote features 25b, CT features 2
+[177644][I][BluetoothA2DPSink.cpp:507] app_gap_callback(): [BT_AV] ESP_BT_GAP_MODE_CHG_EVT
+[177654][I][BluetoothA2DPCommon.cpp:374] log_free_heap(): [BT_AV] Available Heap: 101948
+[178269][I][BluetoothA2DPSink.cpp:507] app_gap_callback(): [BT_AV] ESP_BT_GAP_MODE_CHG_EVT
+[178278][I][BluetoothA2DPCommon.cpp:374] log_free_heap(): [BT_AV] Available Heap: 101948
+[181492][I][BluetoothA2DPSink.cpp:507] app_gap_callback(): [BT_AV] ESP_BT_GAP_MODE_CHG_EVT
+[181500][I][BluetoothA2DPCommon.cpp:374] log_free_heap(): [BT_AV] Available Heap: 101948
+[181769][I][BluetoothA2DPSink.cpp:507] app_gap_callback(): [BT_AV] ESP_BT_GAP_MODE_CHG_EVT
+[181778][I][BluetoothA2DPCommon.cpp:374] log_free_heap(): [BT_AV] Available Heap: 101948
+[184983][I][BluetoothA2DPSink.cpp:507] app_gap_callback(): [BT_AV] ESP_BT_GAP_MODE_CHG_EVT
+[184991][I][BluetoothA2DPCommon.cpp:374] log_free_heap(): [BT_AV] Available Heap: 101948
+[185269][I][BluetoothA2DPSink.cpp:507] app_gap_callback(): [BT_AV] ESP_BT_GAP_MODE_CHG_EVT
+[185278][I][BluetoothA2DPCommon.cpp:374] log_free_heap(): [BT_AV] Available Heap: 101948
+[188496][I][BluetoothA2DPSink.cpp:507] app_gap_callback(): [BT_AV] ESP_BT_GAP_MODE_CHG_EVT
+[188504][I][BluetoothA2DPCommon.cpp:374] log_free_heap(): [BT_AV] Available Heap: 101948
+[188769][I][BluetoothA2DPSink.cpp:507] app_gap_callback(): [BT_AV] ESP_BT_GAP_MODE_CHG_EVT
+[188778][I][BluetoothA2DPCommon.cpp:374] log_free_heap(): [BT_AV] Available Heap: 101948
+[188793][I][BluetoothA2DPSink.cpp:1558] av_hdl_avrc_tg_evt(): [BT_AV] AVRC remote set absolute volume: 29%
+[188802][I][BluetoothA2DPSink.cpp:1509] volume_set_by_controller(): [BT_AV] Volume is set by remote controller to 29
+[189939][I][BluetoothA2DPSink.cpp:1558] av_hdl_avrc_tg_evt(): [BT_AV] AVRC remote set absolute volume: 29%
+[189948][I][BluetoothA2DPSink.cpp:1509] volume_set_by_controller(): [BT_AV] Volume is set by remote controller to 29
+[190021][I][BluetoothA2DPSink.cpp:1558] av_hdl_avrc_tg_evt(): [BT_AV] AVRC remote set absolute volume: 29%
+[190031][I][BluetoothA2DPSink.cpp:1509] volume_set_by_controller(): [BT_AV] Volume is set by remote controller to 29
+[190051][I][BluetoothA2DPSink.cpp:779] handle_audio_state(): [BT_AV] A2DP audio state: Suspended
+[190059][I][BluetoothA2DPSink.cpp:840] set_i2s_active(): [BT_AV] set_i2s_active 1
+[F5] 재생 상태: 재생
+[190247][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x1, After Hours
+[F5] AVRCP 0x01: After Hours
+[190258][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x2, The Weeknd
+[F5] AVRCP 0x02: The Weeknd
+[190271][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x4, After Hours
+[F5] AVRCP 0x04: After Hours
+[F5] 수신 12 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 180 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[203027][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x1, After Hours
+[F5] AVRCP 0x01: After Hours
+[203038][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x2, The Weeknd
+[F5] AVRCP 0x02: The Weeknd
+[203051][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x4, Dawn FM
+[F5] AVRCP 0x04: Dawn FM
+[F5] 수신 176 KB/s
+[203608][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x1, Sacrifice
+[F5] AVRCP 0x01: Sacrifice
+[203619][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x2, The Weeknd
+[F5] AVRCP 0x02: The Weeknd
+[203631][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x4, Dawn FM
+[F5] AVRCP 0x04: Dawn FM
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[239082][I][BluetoothA2DPSink.cpp:1558] av_hdl_avrc_tg_evt(): [BT_AV] AVRC remote set absolute volume: 29%
+[239091][I][BluetoothA2DPSink.cpp:1509] volume_set_by_controller(): [BT_AV] Volume is set by remote controller to 29
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[341924][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x1, Sacrifice
+[F5] AVRCP 0x01: Sacrifice
+[341935][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x2, The Weeknd
+[F5] AVRCP 0x02: The Weeknd
+[341947][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x4, Kiss Land
+[F5] AVRCP 0x04: Kiss Land
+[342458][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x1, Wanderlust
+[F5] AVRCP 0x01: Wanderlust
+[342469][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x2, The Weeknd
+[F5] AVRCP 0x02: The Weeknd
+[342481][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x4, Kiss Land
+[F5] AVRCP 0x04: Kiss Land
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[344011][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x1, Wanderlust
+[F5] AVRCP 0x01: Wanderlust
+[344021][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x2, The Weeknd
+[F5] AVRCP 0x02: The Weeknd
+[344034][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x4, Dawn FM
+[F5] AVRCP 0x04: Dawn FM
+[344571][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x1, How Do I Make You Love Me?
+[F5] AVRCP 0x01: How Do I Make You Love Me?
+[344583][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x2, The Weeknd
+[F5] AVRCP 0x02: The Weeknd
+[344597][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x4, Dawn FM
+[F5] AVRCP 0x04: Dawn FM
+[F5] 수신 184 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[352606][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x1, 영원은 아니어도
+[F5] AVRCP 0x01: 영원은 아니어도
+[352618][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x2, Tuesday Beach Club
+[F5] AVRCP 0x02: Tuesday Beach Club
+[352632][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x4, Forever’s Not Enough
+[F5] AVRCP 0x04: Forever’s Not Enough
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[358458][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x1, 영원은 아니어도
+[F5] AVRCP 0x01: 영원은 아니어도
+[358469][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x2, Tuesday Beach Club
+[F5] AVRCP 0x02: Tuesday Beach Club
+[358484][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x4, Starboy
+[F5] AVRCP 0x04: Starboy
+[F5] 수신 172 KB/s
+[359041][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x1, Starboy
+[F5] AVRCP 0x01: Starboy
+[359051][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x2, The Weeknd, Daft Punk
+[F5] AVRCP 0x02: The Weeknd, Daft Punk
+[359064][I][BluetoothA2DPSink.cpp:1110] av_hdl_avrc_evt(): [BT_AV] AVRC metadata rsp: attribute id 0x4, Starboy
+[F5] AVRCP 0x04: Starboy
+[F5] 수신 176 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[380883][I][BluetoothA2DPSink.cpp:1558] av_hdl_avrc_tg_evt(): [BT_AV] AVRC remote set absolute volume: 29%
+[380893][I][BluetoothA2DPSink.cpp:1509] volume_set_by_controller(): [BT_AV] Volume is set by remote controller to 29
+[F5] 수신 168 KB/s
+[381288][I][BluetoothA2DPSink.cpp:1558] av_hdl_avrc_tg_evt(): [BT_AV] AVRC remote set absolute volume: 29%
+[381298][I][BluetoothA2DPSink.cpp:1509] volume_set_by_controller(): [BT_AV] Volume is set by remote controller to 29
+[F5] 수신 176 KB/s
+[F5] 수신 180 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s
+[F5] 수신 172 KB/s
+[F5] 수신 176 KB/s

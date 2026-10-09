@@ -50,3 +50,12 @@
 - F3 추가 · 앨범 커버: [env:f3cover]에만 bodmer/TJpg_Decoder 추가(1.1.0 설치, 버전 미고정, 사용자 동의). /music/<아티스트>/<앨범>/cover.jpg를 세로 화면 위 240×240에 표시, 아래에 앨범·아티스트·곡 수.
 - 첫 업로드에서 리셋 직후 SD mount 실패(GO_IDLE_STATE failed). 원인: 화면 초기화 중 SD CS(21)가 떠 있어 카드가 버스 신호를 받음. tft.init 전에 SD CS를 OUTPUT HIGH로 고정하자 리셋 3회 모두 첫 시도 20 MHz mount 성공. 재시도(20 MHz 2회 → 4 MHz 2회)도 남겨 둠.
 - 커버 디코드 약 162 ms (logs/f3cover.log). 사용자 확인: 커버·앨범명·아티스트·곡 수 정상 표시.
+
+# S6 블루투스 1차 (F5, DAC 전)
+
+- 2026-10-09: 멀티미터 배송 전이라 S5보다 S6 연결·화면 연동을 먼저 시험. [env:f5] 추가, I2S 출력 끄고(set_stream_reader(..., false)) 수신량만 측정, AVRCP 곡 정보·재생 상태를 세로 화면에 표시. BT 이름 PocketHiFi.
+- 빌드 실패: audio-tools esp32.h의 `#define PIN_I2S_BCK 14`가 pins.h와 충돌. pins.h I2S 상수 이름만 PIN_DAC_BCK/LRCK/DATA로 변경(핀 26/25/22 그대로). 라이브러리 매크로와 겹치는 pins.h 이름 전수 확인, 남은 충돌 없음. f1·f2·f3·f3cover·railcheck 재빌드 성공.
+- Mac 연결: 연결·재생/일시정지 정상. 소리 출력을 PocketHiFi로 직접 바꾼 뒤 수신 172~176 KB/s(44.1 kHz 스테레오 16비트와 일치). 곡 정보는 ESP32가 metadata 요청을 보냈으나 Mac 응답 없음 → 제목·아티스트·앨범 미표시.
+- 폰 연결: 제목·아티스트·앨범 모두 수신·표시(사용자 확인). 한글 제목 "영원은 아니어도" 정상. 수신 172 KB/s (logs/f5-bt-mac.log).
+- 로그에 i2s_set_clk failed(44100) 1회: I2S 출력을 꺼 둔 상태라 발생, DAC 연결(S5) 후 재확인 필요.
+- S6 기준 중 "30분 연속 재생"은 DAC 이후로 보류. 태그 f5는 S6 완료 시 붙임.
