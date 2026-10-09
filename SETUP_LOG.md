@@ -20,3 +20,13 @@
 - 2026-10-09: 최초 이동 시 경로를 잘못 해석하여 Projects 아래에 배치했고, 사용자 정정에 따라 기존 ~/project_hong/pocket-hifi로 이동을 바로잡음. Git 기록·f1 태그·소스·로그 유지, 문서 경로 반영.
 - 이동 후 새 프로젝트 경로에서 pio run 성공 (7.03초).
 - 최종 경로 ~/project_hong/pocket-hifi에서 pio run 성공 (6.96초).
+
+# S2 브레드보드 전원 줄
+
+- 2026-10-09: 사용자 배선 완료 — 3V3 → 왼쪽 바깥 + 레일, GND(왼쪽 14번 핀) → 왼쪽 바깥 − 레일, 47µF·0.1µF, 양쪽 판 바깥 레일 긴 점퍼 연결, 레일 가운데 끊김 짧은 점퍼 연결. 5V(VIN) 핀 미연결.
+- S2: 멀티미터 대신 ESP32 ADC로 확인.
+- 합선 확인: F1 그대로 8초 로그 — PocketHiFi boot / chip rev 3, cores 2, flash 4 MB / free heap 351548 / alive 3회. 3.3V–GND 합선 없음 (logs/s2-short-check.log).
+- 확인용 점퍼: 왼쪽 판 6번 줄(35번 핀) G칸 → 오른쪽 판 바깥 + 레일 아래쪽 반, 7번 줄(32번 핀) G칸 → 오른쪽 판 바깥 − 레일 아래쪽 반. pocket-hifi.html S2 그림에 표시해 안내.
+- [env:railcheck] (extends env:pocket, railcheck/railcheck.cpp) 업로드 후 10초 로그: "+레일 3134 mV OK | -레일 GND OK" 10회 연속 (logs/s2-railcheck-lower.log). 측정값 3134 mV는 ADC 11dB 상한 근처로 기준 2900 mV 이상. 32번 핀은 INPUT_PULLUP만 사용.
+- 오른쪽 판 아래쪽 반에서 통과했으므로 왼쪽 레일 → 긴 점퍼 → 오른쪽 레일 → 가운데 연결까지 3.3V·GND 모두 이어짐. 위쪽 반은 별도 측정하지 않음.
+- 확인용 점퍼 2개 제거 후 F1 재업로드, 8초 로그 정상: PocketHiFi boot / free heap 351548 / alive 3회 (logs/s2-f1-after.log).
