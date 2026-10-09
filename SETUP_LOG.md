@@ -30,3 +30,11 @@
 - [env:railcheck] (extends env:pocket, railcheck/railcheck.cpp) 업로드 후 10초 로그: "+레일 3134 mV OK | -레일 GND OK" 10회 연속 (logs/s2-railcheck-lower.log). 측정값 3134 mV는 ADC 11dB 상한 근처로 기준 2900 mV 이상. 32번 핀은 INPUT_PULLUP만 사용.
 - 오른쪽 판 아래쪽 반에서 통과했으므로 왼쪽 레일 → 긴 점퍼 → 오른쪽 레일 → 가운데 연결까지 3.3V·GND 모두 이어짐. 위쪽 반은 별도 측정하지 않음.
 - 확인용 점퍼 2개 제거 후 F1 재업로드, 8초 로그 정상: PocketHiFi boot / free heap 351548 / alive 3회 (logs/s2-f1-after.log).
+
+# S3 화면 (F2)
+
+- 2026-10-09: 단계 스케치를 src/stages/f1·f2·railcheck로 분리, platformio.ini에 [env:f1]·[env:f2]·[env:railcheck] 추가(모두 env:pocket extends). TFT 설정·라이브러리 버전 변경 없음.
+- F2 첫 빌드 실패: TFT_eSPI User_Setup_Select.h의 `#define PIN_MOSI 8`이 pins.h의 PIN_MOSI와 충돌. pins.h의 SPI 상수 이름만 PIN_SPI_SCK/MOSI/MISO로 변경(핀 번호 18/23/19 그대로) 후 빌드 성공.
+- 사용자 배선: 화면 VCC·LED → + 레일, GND → − 레일, CS → 27, RESET → 14, DC → 13, SDI → 23, SCK → 18. SDO·터치·SD_ 핀 미연결. 0.1µF는 선택 부품으로 HTML 그림에서 숨김.
+- 보드 2(MAC 48:9d:31:04:5a:4c)에 F2 업로드, 시리얼 20초: tft 320x240, 색 채우기 → 영문·숫자 → 한글 → 세로 순서 반복 확인 (logs/f2-display.log).
+- 사용자 눈으로 확인: 빨강·초록·파랑 정상, 영문·숫자 정상, 한글 "안녕, 포켓 하이파이" 정상, 세로 방향 정상. 어두움·줄 깨짐 없음. S3 통과, 태그 f2.

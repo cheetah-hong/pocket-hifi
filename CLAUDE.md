@@ -26,6 +26,21 @@ pio run -t upload --upload-port /dev/cu.usbserial-0001
 ~/.platformio/penv/bin/python tools/serial_check.py /dev/cu.usbserial-0001 8
 ```
 
+### 단계 스케치 (src/stages)
+- 단계마다 스케치를 지우지 않고 src/stages/<이름>/main.cpp로 보존한다. 공통 핀은 src/pins.h.
+- platformio.ini의 [env:<이름>]이 [env:pocket]을 extends하고 build_src_filter로 해당 폴더만 빌드한다.
+- 현재 단계: f1(부팅 로그), f2(화면·한글), railcheck(S2 레일 확인). [env:pocket] 단독은 f1과 같다.
+- 업로드: `pio run -e f2 -t upload --upload-port /dev/cu.usbserial-0001`
+- 새 단계 추가: src/stages/f3/main.cpp 생성 → platformio.ini에 [env:f3] (extends = env:pocket, build_src_filter = -<*> +<pins.h> +<stages/f3/>).
+- pins.h의 SPI 상수는 PIN_SPI_SCK/MOSI/MISO다. TFT_eSPI가 PIN_MOSI·PIN_MISO·PIN_SCLK 매크로를 정의하므로 그 이름은 쓰지 않는다.
+- TFT_eSPI 핀은 platformio.ini build_flags에서 오므로, 화면을 쓰는 스케치는 static_assert로 pins.h와 같은지 확인한다.
+
+### GitHub
+- 원격: https://github.com/cheetah-hong/pocket-hifi (public). 로컬 S2 브랜치 → 원격 main.
+- 단계를 통과할 때마다 커밋·태그 후 푸시한다. 커밋 메시지는 한글, Claude 관련 문구나 공동 작성자 표시를 넣지 않는다.
+- 브랜치 S2와 태그 s2는 macOS에서 이름이 겹치므로 refs/heads/S2, refs/tags/s2처럼 전체 이름을 쓴다.
+  예: `git push origin refs/heads/S2:refs/heads/main refs/tags/f2`
+
 - pio 및 platformio는 ~/.local/bin에 연결되어 있고 ~/.zprofile에서 PATH에 추가했다.
 - 포트 재확인: `ls /dev/cu.*`, `pio device list`.
 - 이 맥에서 USB 칩 확인: `system_profiler SPUSBHostDataType` (SPUSBDataType은 출력 없음).

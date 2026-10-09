@@ -1,6 +1,6 @@
 // src/pins.h — 핀은 여기에만
 #pragma once
-constexpr int PIN_SCK = 18, PIN_MOSI = 23, PIN_MISO = 19;      // 공통 SPI
+constexpr int PIN_SPI_SCK = 18, PIN_SPI_MOSI = 23, PIN_SPI_MISO = 19;  // 공통 SPI (TFT_eSPI의 PIN_MOSI 매크로와 겹치지 않게)
 constexpr int PIN_TFT_CS = 27, PIN_TFT_DC = 13, PIN_TFT_RST = 14;
 constexpr int PIN_SD_CS = 21;
 constexpr int PIN_I2S_BCK = 26, PIN_I2S_LRCK = 25, PIN_I2S_DATA = 22;
