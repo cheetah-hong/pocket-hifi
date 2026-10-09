@@ -17,3 +17,5 @@
 - 보드 2 업로드 성공 및 쓰기 해시 검증. BOOT 버튼 조작 필요 없음. MAC 48:9d:31:04:5a:4c (보드 1과 다름).
 - 보드 2 8초 로그 검증 통과: chip rev 3 / cores 2 / flash 4 MB / free heap 351548 / alive 3회. S1 두 보드 검증 완료.
 - 원본 로그와 정상 앱 부팅 구간을 각각 보존. Claude Code 인수인계 파일에 최종 상태 반영.
+- 2026-10-09: 사용자 요청에 따라 프로젝트를 ~/Projects/project_hong/pocket-hifi로 이동. Git 기록·f1 태그·소스·로그·PlatformIO 설치 파일 유지, 문서 경로 반영.
+- 이동 후 새 프로젝트 경로에서 pio run 성공 (7.03초).

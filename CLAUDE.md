@@ -17,10 +17,10 @@
 - f1 태그는 보드 1 최초 통과 커밋에 있다. 여분 보드 검증과 최종 인수인계는 후속 커밋에 있다. 다음 개발 단계는 f2부터 진행한다.
 
 ## 터미널 명령
-프로젝트 위치: ~/Projects/pocket-hifi
+프로젝트 위치: ~/Projects/project_hong/pocket-hifi
 
 ```sh
-cd ~/Projects/pocket-hifi
+cd ~/Projects/project_hong/pocket-hifi
 pio run
 pio run -t upload --upload-port /dev/cu.usbserial-0001
 ~/.platformio/penv/bin/python tools/serial_check.py /dev/cu.usbserial-0001 8
