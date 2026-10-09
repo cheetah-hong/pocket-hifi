@@ -47,3 +47,6 @@
 - [env:f3] 추가. 초기화 순서 화면 → SD, SD.begin에 tft.getSPIinstance()(TFT_eSPI 자체 VSPI 객체)를 넘겨 같은 SPI 인스턴스 사용. 숨김(.) 항목은 건너뜀.
 - 시리얼 확인(직접): SD mount OK @ 20 MHz, type 2(SDHC), 982 MB, 곡 24개 "경로 (KB)" 출력, …·’ 문자 정상 (logs/f3-sd-list.log). mount 중 sd_diskio "token error [8] 0x5" 경고 1회 있으나 mount·목록 정상.
 - 화면 확인(사용자): "곡 24개 · /music"과 곡 목록 표시, 깨진 글자 없음. 카드에 한글 파일명이 없어 한글 파일명 표시는 미검증. S4 통과, 태그 f3.
+- F3 추가 · 앨범 커버: [env:f3cover]에만 bodmer/TJpg_Decoder 추가(1.1.0 설치, 버전 미고정, 사용자 동의). /music/<아티스트>/<앨범>/cover.jpg를 세로 화면 위 240×240에 표시, 아래에 앨범·아티스트·곡 수.
+- 첫 업로드에서 리셋 직후 SD mount 실패(GO_IDLE_STATE failed). 원인: 화면 초기화 중 SD CS(21)가 떠 있어 카드가 버스 신호를 받음. tft.init 전에 SD CS를 OUTPUT HIGH로 고정하자 리셋 3회 모두 첫 시도 20 MHz mount 성공. 재시도(20 MHz 2회 → 4 MHz 2회)도 남겨 둠.
+- 커버 디코드 약 162 ms (logs/f3cover.log). 사용자 확인: 커버·앨범명·아티스트·곡 수 정상 표시.

@@ -1,0 +1,22 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13232
+load:0x40080400,len:3028
+entry 0x400805e4
+PocketHiFi F3 cover test
+[   661][W][sd_diskio.cpp:186] sdCommand(): token error [0] 0x5
+[   668][W][sd_diskio.cpp:516] ff_sd_initialize(): GO_IDLE_STATE failed
+[   674][E][sd_diskio.cpp:806] sdcard_mount(): f_mount failed: (3) The physical drive cannot work
+[F3C] SD mount 실패 @ 20 MHz (시도 1)
+[   785][W][sd_diskio.cpp:186] sdCommand(): token error [8] 0x5
+[F3C] SD mount OK @ 20 MHz (시도 2)
+[F3C] 앨범 1개
+  The Weeknd / Dawn FM (Alternate World) (24곡)
+[F3C] /music/The Weeknd/Dawn FM (Alternate World)/cover.jpg → OK, 162 ms
+[F3C] /music/The Weeknd/Dawn FM (Alternate World)/cover.jpg → OK, 161 ms
+[F3C] /music/The Weeknd/Dawn FM (Alternate World)/cover.jpg → OK, 161 ms
