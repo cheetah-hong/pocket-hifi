@@ -1,0 +1,248 @@
+Processing pocket (platform: espressif32; board: esp32dev; framework: arduino)
+--------------------------------------------------------------------------------
+Tool Manager: Installing platformio/tool-scons @ ~4.41101.0
+Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Tool Manager: tool-scons@4.41101.0 has been installed!
+Library Manager: Installing bodmer/TFT_eSPI
+Downloading 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: TFT_eSPI@2.5.43 has been installed!
+Library Manager: Installing git+https://github.com/Bodmer/U8g2_for_TFT_eSPI.git
+git version 2.50.1 (Apple Git-155)
+Cloning into '/Users/cheetah_hong/.platformio/.cache/tmp/pkg-installing-whuhmons'...
+Library Manager: U8g2_for_TFT_eSPI@1.7.0+sha.a170ef8 has been installed!
+Library Manager: Resolving dependencies...
+Library Manager: Installing TFT_eSPI Library
+Library Manager: Installing git+https://github.com/pschatzmann/arduino-audio-tools.git
+git version 2.50.1 (Apple Git-155)
+Cloning into '/Users/cheetah_hong/.platformio/.cache/tmp/pkg-installing-57h_a8t3'...
+Library Manager: audio-tools@1.2.6+sha.630fa74 has been installed!
+Library Manager: Installing git+https://github.com/pschatzmann/arduino-libhelix.git
+git version 2.50.1 (Apple Git-155)
+Cloning into '/Users/cheetah_hong/.platformio/.cache/tmp/pkg-installing-mxi3cjt_'...
+Library Manager: libhelix@0.9.4+sha.f6e55a3 has been installed!
+Library Manager: Installing git+https://github.com/pschatzmann/ESP32-A2DP.git
+git version 2.50.1 (Apple Git-155)
+Cloning into '/Users/cheetah_hong/.platformio/.cache/tmp/pkg-installing-wb8oh2j4'...
+Library Manager: ESP32-A2DP@1.8.11+sha.a9e946a has been installed!
+Library Manager: Installing madhephaestus/ESP32Encoder
+Downloading 0% 10% 20%
+Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+Library Manager: ESP32Encoder@5.0.0 has been installed!
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32dev.html
+PLATFORM: Espressif 32 (7.1.3) > Espressif ESP32 Dev Module
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 4.20017.260907+sha.dcc1105b 
+ - tool-esptoolpy @ 2.41100.260830 (4.11.0) 
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 39 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- TFT_eSPI @ 2.5.43
+|-- U8g2_for_TFT_eSPI @ 1.7.0+sha.a170ef8
+|-- audio-tools @ 1.2.6+sha.630fa74
+|-- libhelix @ 0.9.4+sha.f6e55a3
+|-- ESP32-A2DP @ 1.8.11+sha.a9e946a
+|-- ESP32Encoder @ 5.0.0
+Building in release mode
+Compiling .pio/build/pocket/src/main.cpp.o
+Building .pio/build/pocket/bootloader.bin
+Generating partitions .pio/build/pocket/partitions.bin
+Compiling .pio/build/pocket/lib458/SPI/SPI.cpp.o
+Compiling .pio/build/pocket/lib386/FS/FS.cpp.o
+esptool.py v4.11.0
+Creating esp32 image...
+Merged 1 ELF section
+Successfully created esp32 image.
+Compiling .pio/build/pocket/lib386/FS/vfs_api.cpp.o
+Compiling .pio/build/pocket/liba9c/SPIFFS/SPIFFS.cpp.o
+Compiling .pio/build/pocket/libbd5/LittleFS/LittleFS.cpp.o
+Compiling .pio/build/pocket/libb36/TFT_eSPI/TFT_eSPI.cpp.o
+Compiling .pio/build/pocket/liba70/U8g2_for_TFT_eSPI/U8g2_for_TFT_eSPI.cpp.o
+Compiling .pio/build/pocket/liba70/U8g2_for_TFT_eSPI/u8g2_fonts.c.o
+Compiling .pio/build/pocket/libf6b/WiFi/WiFi.cpp.o
+In file included from .pio/libdeps/pocket/TFT_eSPI/TFT_eSPI.cpp:16:
+.pio/libdeps/pocket/TFT_eSPI/TFT_eSPI.h:973:8: warning: #warning >>>>------>> TOUCH_CS pin not defined, TFT_eSPI touch functions will not be available! [-Wcpp]
+       #warning >>>>------>> TOUCH_CS pin not defined, TFT_eSPI touch functions will not be available!
+        ^~~~~~~
+In file included from .pio/libdeps/pocket/U8g2_for_TFT_eSPI/src/U8g2_for_TFT_eSPI.cpp:40:
+.pio/libdeps/pocket/TFT_eSPI/TFT_eSPI.h:973:8: warning: #warning >>>>------>> TOUCH_CS pin not defined, TFT_eSPI touch functions will not be available! [-Wcpp]
+       #warning >>>>------>> TOUCH_CS pin not defined, TFT_eSPI touch functions will not be available!
+        ^~~~~~~
+Compiling .pio/build/pocket/libf6b/WiFi/WiFiAP.cpp.o
+Compiling .pio/build/pocket/libf6b/WiFi/WiFiClient.cpp.o
+Archiving .pio/build/pocket/libbd5/libLittleFS.a
+Archiving .pio/build/pocket/lib386/libFS.a
+Archiving .pio/build/pocket/liba9c/libSPIFFS.a
+Archiving .pio/build/pocket/lib458/libSPI.a
+Compiling .pio/build/pocket/libf6b/WiFi/WiFiGeneric.cpp.o
+Compiling .pio/build/pocket/libf6b/WiFi/WiFiMulti.cpp.o
+Archiving .pio/build/pocket/liba70/libU8g2_for_TFT_eSPI.a
+Compiling .pio/build/pocket/libf6b/WiFi/WiFiSTA.cpp.o
+Indexing .pio/build/pocket/lib458/libSPI.a
+Indexing .pio/build/pocket/libbd5/libLittleFS.a
+Indexing .pio/build/pocket/lib386/libFS.a
+Indexing .pio/build/pocket/liba9c/libSPIFFS.a
+Indexing .pio/build/pocket/liba70/libU8g2_for_TFT_eSPI.a
+Compiling .pio/build/pocket/libf6b/WiFi/WiFiScan.cpp.o
+Compiling .pio/build/pocket/libf6b/WiFi/WiFiServer.cpp.o
+Compiling .pio/build/pocket/libf6b/WiFi/WiFiUdp.cpp.o
+Compiling .pio/build/pocket/lib0f2/Ticker/Ticker.cpp.o
+Compiling .pio/build/pocket/libcf1/I2S/I2S.cpp.o
+Compiling .pio/build/pocket/lib936/audio-tools/AudioTools/CoreAudio/AudioRuntime.cpp.o
+Archiving .pio/build/pocket/lib0f2/libTicker.a
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/aacdec.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/aactabs.c.o
+Indexing .pio/build/pocket/lib0f2/libTicker.a
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/bitstream.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/buffers.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/dct4.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/decelmnt.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/dequant.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/fft.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/filefmt.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/huffman.c.o
+/Users/cheetah_hong/.platformio/packages/framework-arduinoespressif32/libraries/I2S/src/I2S.cpp: In member function 'int I2SClass::_installDriver()':
+/Users/cheetah_hong/.platformio/packages/framework-arduinoespressif32/libraries/I2S/src/I2S.cpp:202:89: warning: 'ADC_ATTEN_DB_11' is deprecated [-Wdeprecated-declarations]
+       esp_i2s::adc1_config_channel_atten((esp_i2s::adc1_channel_t)adc_channel, esp_i2s::ADC_ATTEN_DB_11);
+                                                                                         ^~~~~~~~~~~~~~~
+In file included from /Users/cheetah_hong/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/driver/include/driver/adc.h:14,
+                 from /Users/cheetah_hong/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/driver/include/driver/i2s.h:21,
+                 from /Users/cheetah_hong/.platformio/packages/framework-arduinoespressif32/libraries/I2S/src/I2S.h:26,
+                 from /Users/cheetah_hong/.platformio/packages/framework-arduinoespressif32/libraries/I2S/src/I2S.cpp:21:
+/Users/cheetah_hong/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/hal/include/hal/adc_types.h:54:5: note: declared here
+     ADC_ATTEN_DB_11 __attribute__((deprecated)) = ADC_ATTEN_DB_12,  ///<This is deprecated, it behaves the same as `ADC_ATTEN_DB_12`
+     ^~~~~~~~~~~~~~~
+/Users/cheetah_hong/.platformio/packages/framework-arduinoespressif32/libraries/I2S/src/I2S.cpp:204:89: warning: 'ADC_ATTEN_DB_11' is deprecated [-Wdeprecated-declarations]
+       esp_i2s::adc2_config_channel_atten((esp_i2s::adc2_channel_t)adc_channel, esp_i2s::ADC_ATTEN_DB_11);
+                                                                                         ^~~~~~~~~~~~~~~
+In file included from /Users/cheetah_hong/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/driver/include/driver/adc.h:14,
+                 from /Users/cheetah_hong/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/driver/include/driver/i2s.h:21,
+                 from /Users/cheetah_hong/.platformio/packages/framework-arduinoespressif32/libraries/I2S/src/I2S.h:26,
+                 from /Users/cheetah_hong/.platformio/packages/framework-arduinoespressif32/libraries/I2S/src/I2S.cpp:21:
+/Users/cheetah_hong/.platformio/packages/framework-arduinoespressif32/tools/sdk/esp32/include/hal/include/hal/adc_types.h:54:5: note: declared here
+     ADC_ATTEN_DB_11 __attribute__((deprecated)) = ADC_ATTEN_DB_12,  ///<This is deprecated, it behaves the same as `ADC_ATTEN_DB_12`
+     ^~~~~~~~~~~~~~~
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/hufftabs.c.o
+Archiving .pio/build/pocket/libf6b/libWiFi.a
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/imdct.c.o
+Indexing .pio/build/pocket/libf6b/libWiFi.a
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/noiseless.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/pns.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/sbr.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/sbrfft.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/sbrfreq.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/sbrhfadj.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/sbrhfgen.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/sbrhuff.c.o
+Archiving .pio/build/pocket/libb36/libTFT_eSPI.a
+Archiving .pio/build/pocket/lib936/libaudio-tools.a
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/sbrimdct.c.o
+Indexing .pio/build/pocket/libb36/libTFT_eSPI.a
+Indexing .pio/build/pocket/lib936/libaudio-tools.a
+Archiving .pio/build/pocket/libcf1/libI2S.a
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/sbrmath.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/sbrqmf.c.o
+Indexing .pio/build/pocket/libcf1/libI2S.a
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/sbrside.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/sbrtabs.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/stproc.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/tns.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-aac/trigtabs.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-mp3/bitstream.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-mp3/buffers.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-mp3/dct32.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-mp3/dequant.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-mp3/dqchan.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-mp3/huffman.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-mp3/hufftabs.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-mp3/imdct.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-mp3/mp3dec.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-mp3/mp3tabs.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-mp3/polyphase.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-mp3/scalfact.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-mp3/stproc.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-mp3/subband.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/libhelix-mp3/trigtabs.c.o
+Compiling .pio/build/pocket/lib1cd/libhelix/utils/helix_memory.cpp.o
+Compiling .pio/build/pocket/lib60f/ESP32-A2DP/A2DPDecoder.cpp.o
+Archiving .pio/build/pocket/lib1cd/libhelix.a
+Compiling .pio/build/pocket/lib60f/ESP32-A2DP/A2DPEncoder.cpp.o
+Compiling .pio/build/pocket/lib60f/ESP32-A2DP/BluetoothA2DPCommon.cpp.o
+Compiling .pio/build/pocket/lib60f/ESP32-A2DP/BluetoothA2DPOutput.cpp.o
+Indexing .pio/build/pocket/lib1cd/libhelix.a
+Compiling .pio/build/pocket/lib60f/ESP32-A2DP/BluetoothA2DPSink.cpp.o
+Compiling .pio/build/pocket/lib60f/ESP32-A2DP/BluetoothA2DPSinkQueued.cpp.o
+Compiling .pio/build/pocket/lib60f/ESP32-A2DP/BluetoothA2DPSource.cpp.o
+Compiling .pio/build/pocket/libfa3/ESP32Encoder/ESP32Encoder.cpp.o
+Compiling .pio/build/pocket/libfa3/ESP32Encoder/InterruptEncoder.cpp.o
+Compiling .pio/build/pocket/FrameworkArduino/Esp.cpp.o
+Compiling .pio/build/pocket/FrameworkArduino/FirmwareMSC.cpp.o
+Compiling .pio/build/pocket/FrameworkArduino/FunctionalInterrupt.cpp.o
+Compiling .pio/build/pocket/FrameworkArduino/HWCDC.cpp.o
+Compiling .pio/build/pocket/FrameworkArduino/HardwareSerial.cpp.o
+Compiling .pio/build/pocket/FrameworkArduino/IPAddress.cpp.o
+Archiving .pio/build/pocket/libfa3/libESP32Encoder.a
+Compiling .pio/build/pocket/FrameworkArduino/IPv6Address.cpp.o
+Indexing .pio/build/pocket/libfa3/libESP32Encoder.a
+Compiling .pio/build/pocket/FrameworkArduino/MD5Builder.cpp.o
+Compiling .pio/build/pocket/FrameworkArduino/Print.cpp.o
+Compiling .pio/build/pocket/FrameworkArduino/Stream.cpp.o
+Compiling .pio/build/pocket/FrameworkArduino/StreamString.cpp.o
+Compiling .pio/build/pocket/FrameworkArduino/Tone.cpp.o
+Compiling .pio/build/pocket/FrameworkArduino/USB.cpp.o
+Compiling .pio/build/pocket/FrameworkArduino/USBCDC.cpp.o
+Compiling .pio/build/pocket/FrameworkArduino/USBMSC.cpp.o
+Compiling .pio/build/pocket/FrameworkArduino/WMath.cpp.o
+Compiling .pio/build/pocket/FrameworkArduino/WString.cpp.o
+Compiling .pio/build/pocket/FrameworkArduino/base64.cpp.o
+Compiling .pio/build/pocket/FrameworkArduino/cbuf.cpp.o
+Compiling .pio/build/pocket/FrameworkArduino/esp32-hal-adc.c.o
+Compiling .pio/build/pocket/FrameworkArduino/esp32-hal-bt.c.o
+Compiling .pio/build/pocket/FrameworkArduino/esp32-hal-cpu.c.o
+Compiling .pio/build/pocket/FrameworkArduino/esp32-hal-dac.c.o
+Compiling .pio/build/pocket/FrameworkArduino/esp32-hal-gpio.c.o
+Compiling .pio/build/pocket/FrameworkArduino/esp32-hal-i2c-slave.c.o
+Compiling .pio/build/pocket/FrameworkArduino/esp32-hal-i2c.c.o
+Compiling .pio/build/pocket/FrameworkArduino/esp32-hal-ledc.c.o
+Compiling .pio/build/pocket/FrameworkArduino/esp32-hal-matrix.c.o
+Compiling .pio/build/pocket/FrameworkArduino/esp32-hal-misc.c.o
+Compiling .pio/build/pocket/FrameworkArduino/esp32-hal-psram.c.o
+Compiling .pio/build/pocket/FrameworkArduino/esp32-hal-rgb-led.c.o
+Compiling .pio/build/pocket/FrameworkArduino/esp32-hal-rmt.c.o
+Compiling .pio/build/pocket/FrameworkArduino/esp32-hal-sigmadelta.c.o
+Compiling .pio/build/pocket/FrameworkArduino/esp32-hal-spi.c.o
+Compiling .pio/build/pocket/FrameworkArduino/esp32-hal-time.c.o
+Compiling .pio/build/pocket/FrameworkArduino/esp32-hal-timer.c.o
+Compiling .pio/build/pocket/FrameworkArduino/esp32-hal-tinyusb.c.o
+Compiling .pio/build/pocket/FrameworkArduino/esp32-hal-touch.c.o
+Compiling .pio/build/pocket/FrameworkArduino/esp32-hal-uart.c.o
+Compiling .pio/build/pocket/FrameworkArduino/firmware_msc_fat.c.o
+Compiling .pio/build/pocket/FrameworkArduino/libb64/cdecode.c.o
+Compiling .pio/build/pocket/FrameworkArduino/libb64/cencode.c.o
+Compiling .pio/build/pocket/FrameworkArduino/main.cpp.o
+Compiling .pio/build/pocket/FrameworkArduino/stdlib_noniso.c.o
+Compiling .pio/build/pocket/FrameworkArduino/wiring_pulse.c.o
+Compiling .pio/build/pocket/FrameworkArduino/wiring_shift.c.o
+Archiving .pio/build/pocket/lib60f/libESP32-A2DP.a
+Indexing .pio/build/pocket/lib60f/libESP32-A2DP.a
+Archiving .pio/build/pocket/libFrameworkArduino.a
+Indexing .pio/build/pocket/libFrameworkArduino.a
+Linking .pio/build/pocket/firmware.elf
+Retrieving maximum program size .pio/build/pocket/firmware.elf
+Checking size .pio/build/pocket/firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]   6.6% (used 21464 bytes from 327680 bytes)
+Flash: [=         ]   8.6% (used 269045 bytes from 3145728 bytes)
+Building .pio/build/pocket/firmware.bin
+esptool.py v4.11.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+========================= [SUCCESS] Took 25.19 seconds =========================
