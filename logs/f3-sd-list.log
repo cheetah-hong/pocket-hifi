@@ -1,0 +1,43 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13232
+load:0x40080400,len:3028
+entry 0x400805e4
+PocketHiFi F3 microSD list
+[F3] SD는 화면의 SPI 인스턴스 사용 (tft.getSPIinstance @0x3ffc1f60, 전역 SPI @0x3ffc1f3c)
+[   674][W][sd_diskio.cpp:180] sdCommand(): crc error
+[   787][W][sd_diskio.cpp:186] sdCommand(): token error [8] 0x5
+[F3] SD mount OK @ 20 MHz, type 2, size 982 MB
+[F3] 곡 24개
+/music/The Weeknd/Dawn FM (Alternate World)/01 - Dawn FM.mp3 (1625 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/02 - Gasoline.mp3 (3436 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/03 - How Do I Make You Love Me_.mp3 (3468 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/04 - Take My Breath.mp3 (5418 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/05 - Sacrifice.mp3 (3073 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/06 - A Tale By Quincy.mp3 (1625 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/07 - Out of Time.mp3 (3468 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/08 - Here We Go… Again.mp3 (3399 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/09 - Best Friends.mp3 (2676 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/10 - Is There Someone Else_.mp3 (3232 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/11 - Starry Eyes.mp3 (2434 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/12 - Every Angel is Terrifying.mp3 (2734 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/13 - Don’t Break My Heart.mp3 (3331 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/14 - I Heard You’re Married.mp3 (4240 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/15 - Less Than Zero.mp3 (3431 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/16 - Phantom Regret by Jim.mp3 (2927 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/17 - Moth To A Flame.mp3 (3777 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/18 - Dawn FM (OPN Remix).mp3 (2994 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/19 - How Do I Make You Love Me_ (Sebastian Ingrosso & Salvatore Ganacci Remix).mp3 (3524 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/20 - Sacrifice (Remix).mp3 (3840 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/21 - Out of Time (KAYTRANADA Remix).mp3 (4427 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/22 - Best Friends (Remix).mp3 (2856 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/23 - Starry Eyes (MIKE DEAN Remix).mp3 (3218 KB)
+/music/The Weeknd/Dawn FM (Alternate World)/24 - Take My Breath (Single Version).mp3 (3562 KB)
+[F3] 화면에 목록 표시 완료
+alive
+alive

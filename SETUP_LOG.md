@@ -38,3 +38,12 @@
 - 사용자 배선: 화면 VCC·LED → + 레일, GND → − 레일, CS → 27, RESET → 14, DC → 13, SDI → 23, SCK → 18. SDO·터치·SD_ 핀 미연결. 0.1µF는 선택 부품으로 HTML 그림에서 숨김.
 - 보드 2(MAC 48:9d:31:04:5a:4c)에 F2 업로드, 시리얼 20초: tft 320x240, 색 채우기 → 영문·숫자 → 한글 → 세로 순서 반복 확인 (logs/f2-display.log).
 - 사용자 눈으로 확인: 빨강·초록·파랑 정상, 영문·숫자 정상, 한글 "안녕, 포켓 하이파이" 정상, 세로 방향 정상. 어두움·줄 깨짐 없음. S3 통과, 태그 f2.
+
+# S4 microSD (F3)
+
+- 2026-10-09: SD 보드(파란색, 핀 3v3·CS·MOSI·CLK·MISO·GND, 레귤레이터 없음) 확인. HTML S4 그림을 실물 핀 순서로 수정.
+- 카드: 1GB FAT32 "NO NAME". /music 생성, 사용자가 넣은 24곡을 ID3 태그 기준 /music/The Weeknd/Dawn FM (Alternate World)/로 정리, 내장 앨범 아트로 cover.jpg(240×240 baseline) 생성, macOS ._ 파일 정리 후 추출.
+- 사용자 배선: 3v3 → + 레일, GND → − 레일, CS → 21, MOSI → 23, CLK → 18, MISO → 19. 화면 배선 유지, 화면 SDO 미연결.
+- [env:f3] 추가. 초기화 순서 화면 → SD, SD.begin에 tft.getSPIinstance()(TFT_eSPI 자체 VSPI 객체)를 넘겨 같은 SPI 인스턴스 사용. 숨김(.) 항목은 건너뜀.
+- 시리얼 확인(직접): SD mount OK @ 20 MHz, type 2(SDHC), 982 MB, 곡 24개 "경로 (KB)" 출력, …·’ 문자 정상 (logs/f3-sd-list.log). mount 중 sd_diskio "token error [8] 0x5" 경고 1회 있으나 mount·목록 정상.
+- 화면 확인(사용자): "곡 24개 · /music"과 곡 목록 표시, 깨진 글자 없음. 카드에 한글 파일명이 없어 한글 파일명 표시는 미검증. S4 통과, 태그 f3.

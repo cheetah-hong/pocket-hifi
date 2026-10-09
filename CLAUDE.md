@@ -29,7 +29,7 @@ pio run -t upload --upload-port /dev/cu.usbserial-0001
 ### 단계 스케치 (src/stages)
 - 단계마다 스케치를 지우지 않고 src/stages/<이름>/main.cpp로 보존한다. 공통 핀은 src/pins.h.
 - platformio.ini의 [env:<이름>]이 [env:pocket]을 extends하고 build_src_filter로 해당 폴더만 빌드한다.
-- 현재 단계: f1(부팅 로그), f2(화면·한글), railcheck(S2 레일 확인). [env:pocket] 단독은 f1과 같다.
+- 현재 단계: f1(부팅 로그), f2(화면·한글), f3(microSD 곡 목록), railcheck(S2 레일 확인). [env:pocket] 단독은 f1과 같다.
 - 업로드: `pio run -e f2 -t upload --upload-port /dev/cu.usbserial-0001`
 - 새 단계 추가: src/stages/f3/main.cpp 생성 → platformio.ini에 [env:f3] (extends = env:pocket, build_src_filter = -<*> +<pins.h> +<stages/f3/>).
 - pins.h의 SPI 상수는 PIN_SPI_SCK/MOSI/MISO다. TFT_eSPI가 PIN_MOSI·PIN_MISO·PIN_SCLK 매크로를 정의하므로 그 이름은 쓰지 않는다.
