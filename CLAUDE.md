@@ -29,7 +29,7 @@ pio run -t upload --upload-port /dev/cu.usbserial-0001
 ### 단계 스케치 (src/stages)
 - 단계마다 스케치를 지우지 않고 src/stages/<이름>/main.cpp로 보존한다. 공통 핀은 src/pins.h.
 - platformio.ini의 [env:<이름>]이 [env:pocket]을 extends하고 build_src_filter로 해당 폴더만 빌드한다.
-- 현재 단계: f1(부팅 로그), f2(화면·한글), f3(microSD 곡 목록), f3cover(앨범 커버, TJpg_Decoder 사용), f5(블루투스 A2DP 수신·AVRCP 곡 정보, 소리 출력 없음), railcheck(S2 레일 확인). [env:pocket] 단독은 f1과 같다.
+- 현재 단계: f1(부팅 로그), f2(화면·한글), f3(microSD 곡 목록), f3cover(앨범 커버, TJpg_Decoder 사용), f4(SD mp3 → I2S DAC 재생), f5(블루투스 A2DP 수신·AVRCP 곡 정보, 소리 출력 없음), railcheck(S2 레일 확인). [env:pocket] 단독은 f1과 같다.
 - 업로드: `pio run -e f2 -t upload --upload-port /dev/cu.usbserial-0001`
 - 새 단계 추가: src/stages/f3/main.cpp 생성 → platformio.ini에 [env:f3] (extends = env:pocket, build_src_filter = -<*> +<pins.h> +<stages/f3/>).
 - pins.h의 SPI 상수는 PIN_SPI_SCK/MOSI/MISO, I2S 상수는 PIN_DAC_BCK/LRCK/DATA다. TFT_eSPI(PIN_MOSI·PIN_MISO·PIN_SCLK)와 audio-tools(PIN_I2S_*)가 같은 이름의 매크로를 정의하므로 그 이름은 쓰지 않는다.
