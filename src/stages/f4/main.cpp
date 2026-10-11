@@ -14,7 +14,7 @@ static_assert(TFT_CS == PIN_TFT_CS && TFT_DC == PIN_TFT_DC && TFT_RST == PIN_TFT
 static_assert(TFT_MOSI == PIN_SPI_MOSI && TFT_SCLK == PIN_SPI_SCK && TFT_MISO == PIN_SPI_MISO,
               "platformio.ini SPI 핀이 pins.h와 다름");
 
-constexpr float START_VOLUME = 0.7f;  // 0.1 → 0.3 → 사용자 요청으로 0.7 (귀 보호: 처음엔 귀에서 뗀 채로)
+constexpr float START_VOLUME = 0.7f;  // DAC 잭 직결 기준(앰프는 V1로 연기). 0.1 → 0.3 → 0.7(사용자 확인)
 constexpr size_t START_TRACK = 1;     // 0부터 셈: 1 = 2번 트랙
 constexpr uint32_t SD_FREQ_HZ = 20000000;
 constexpr const char *MUSIC_ROOT = "/music";
@@ -68,7 +68,7 @@ void showTrack() {
   tft.fillScreen(TFT_BLACK);
   drawText(22, String("재생 중 ") + (trackIndex + 1) + "/" + tracks.size(), TFT_YELLOW);
   drawText(50, baseName(tracks[trackIndex]), TFT_WHITE);
-  drawText(78, String("볼륨 ") + String(START_VOLUME, 1), TFT_CYAN);
+  drawText(78, String("볼륨 ") + String(START_VOLUME, 2), TFT_CYAN);
 }
 
 bool openTrack(size_t index) {
@@ -121,7 +121,7 @@ void setup() {
   }
   File root = SD.open(MUSIC_ROOT);
   if (root) collectTracks(root);
-  Serial.printf("[F4] 곡 %u개, 볼륨 %.1f\n", tracks.size(), START_VOLUME);
+  Serial.printf("[F4] 곡 %u개, 볼륨 %.2f\n", tracks.size(), START_VOLUME);
   if (tracks.empty()) {
     drawText(30, "/music에 mp3 없음", TFT_RED);
     return;
