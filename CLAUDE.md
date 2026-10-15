@@ -5,7 +5,7 @@
 - 보드 1 USB 칩: Silicon Labs CP2102 USB to UART Bridge Controller, VID 0x10c4 / PID 0xea60.
 - 보드 1 포트: /dev/cu.usbserial-0001. 보드를 교체하면 포트를 다시 확인한다.
 - macOS 26.3.1, Apple Silicon (arm64), PlatformIO Core 6.2.0, Git 2.50.1.
-- 보드 단독 테스트. 외부 부품이나 핀 배선 없음.
+- 브레드보드 2개에 ESP32(보드 2)를 걸쳐 꽂고 화면(ILI9341)·microSD·DAC(PCM5102A 예비 보드, 판 밖 점퍼 연결)을 배선한 상태. 앰프(TDA1308)는 V1로 연기.
 - 두 보드 모두 S1 빌드·업로드·부팅 검증 통과. BOOT 버튼 조작 필요 없음.
 - 현재 연결된 보드 2도 CP2102 (VID 0x10c4 / PID 0xea60), 포트 /dev/cu.usbserial-0001.
 - 보드 1 MAC 48:9d:31:04:5d:fc, 보드 2 MAC 48:9d:31:04:5a:4c.
@@ -14,7 +14,14 @@
 - logs/board1-serial-raw.log 및 logs/board2-serial-raw.log에 원본 로그를, logs/board1-boot.log 및 logs/board2-boot.log에 정상 앱 부팅 구간을 보존했다.
 - 두 보드 모두 리셋 직후 깨진 문자가 있었으나 115200 baud에서 앱 부팅 이후 출력은 정상이다.
 - 첫 설치 중 sin1.contabostorage.com DNS 실패가 발생했으나 공식 대체 미러와 SHA-256 검증으로 설치를 완료했다. 이미 설치된 도구로 터미널 빌드·업로드·로그 확인이 가능하다.
-- f1 태그는 보드 1 최초 통과 커밋에 있다. 여분 보드 검증과 최종 인수인계는 후속 커밋에 있다. 다음 개발 단계는 f2부터 진행한다.
+- 통과 태그: f1(S1) · s2(S2) · f2(S3 화면) · f3(S4 SD) · f4(S5 DAC 재생) · f5(S6 블루투스 30분). 상세는 SETUP_LOG.md.
+
+## 다음 작업: S7 버튼 4개 (F6 → F7)
+- 사람용 배선 가이드: ~/Downloads/pocket-hifi.html의 "S7 배선 · 버튼 4개" 그림과 순서 ①~⑤ (저장소 밖 파일). 버튼은 두 판 아래쪽 34~36·38~40번 줄, 가운데 홈을 가로질러. 신호: 위 → 왼쪽 판 7번 줄(32), 아래 → 8번 줄(33), MENU → 오른쪽 판 12번 줄(16), PLAY → 11번 줄(17). GND는 가까운 − 레일. 34번 핀은 비워 둔다.
+- 2026-10-15 기준: 사용자에게 S7 배선을 요청했고 아직 "완료" 답변 전. 보드에는 F6(버튼 테스트, 소리 없음)이 올라가 있다.
+- F6 통과 기준: 버튼마다 한 번 누르면 한 번만 셈(30 ms 디바운스), 0.6초 이상은 "길게", 시작 시 "눌림"으로 읽히는 버튼이 없을 것(있으면 신호선이 GND 쪽에 꽂힌 것). 통과하면 태그 f6.
+- 그다음 F7 화면 흐름(세로): 부팅 화면(자체 로고, 남의 상표 금지) → 곡 목록(위·아래·PLAY 선택, MENU 뒤로) → 재생 화면(앨범 커버 cover.jpg + 제목·아티스트) → SD/블루투스 전환. 블루투스 재생 시 커버는 SD에 같은 앨범 폴더가 있으면 그 cover.jpg, 없으면 기본 그림(사용자와 합의한 방향). 화면 갱신은 1초 주기가 적당(사용자 요청, S6에서 소리 영향 없음 확인).
+- 남은 V0 이후 메모: 앰프는 V1 만능기판에서 AWG26 연선으로 재시도. 사용자 이어폰 기준 DAC 잭 볼륨은 0.35~0.7이 적당했다.
 
 ## 터미널 명령
 프로젝트 위치: ~/project_hong/pocket-hifi
@@ -29,7 +36,7 @@ pio run -t upload --upload-port /dev/cu.usbserial-0001
 ### 단계 스케치 (src/stages)
 - 단계마다 스케치를 지우지 않고 src/stages/<이름>/main.cpp로 보존한다. 공통 핀은 src/pins.h.
 - platformio.ini의 [env:<이름>]이 [env:pocket]을 extends하고 build_src_filter로 해당 폴더만 빌드한다.
-- 현재 단계: f1(부팅 로그), f2(화면·한글), f3(microSD 곡 목록), f3cover(앨범 커버, TJpg_Decoder 사용), f4(SD mp3 → I2S DAC 재생), f4lr(좌우 채널 확인 톤), f5(블루투스 A2DP 수신·AVRCP 곡 정보, 소리 출력 없음), railcheck(S2 레일 확인). [env:pocket] 단독은 f1과 같다.
+- 현재 단계: f1(부팅 로그), f2(화면·한글), f3(microSD 곡 목록), f3cover(앨범 커버, TJpg_Decoder 사용), f4(SD mp3 → I2S DAC 재생, 볼륨·시작 곡·한 곡 반복 상수), f4lr(좌우 채널 확인 톤), f5(블루투스 → 버퍼 → DAC, AVRCP 곡 정보·수신량·끊김 표시), f6(버튼 입력 테스트), railcheck(S2 레일 확인). [env:pocket] 단독은 f1과 같다.
 - 업로드: `pio run -e f2 -t upload --upload-port /dev/cu.usbserial-0001`
 - 새 단계 추가: src/stages/f3/main.cpp 생성 → platformio.ini에 [env:f3] (extends = env:pocket, build_src_filter = -<*> +<pins.h> +<stages/f3/>).
 - pins.h의 SPI 상수는 PIN_SPI_SCK/MOSI/MISO, I2S 상수는 PIN_DAC_BCK/LRCK/DATA다. TFT_eSPI(PIN_MOSI·PIN_MISO·PIN_SCLK)와 audio-tools(PIN_I2S_*)가 같은 이름의 매크로를 정의하므로 그 이름은 쓰지 않는다.
@@ -45,6 +52,7 @@ pio run -t upload --upload-port /dev/cu.usbserial-0001
 - 포트 재확인: `ls /dev/cu.*`, `pio device list`.
 - 이 맥에서 USB 칩 확인: `system_profiler SPUSBHostDataType` (SPUSBDataType은 출력 없음).
 - 로그 스크립트는 115200 baud로 EN 리셋 후 지정한 시간 동안 출력한다.
+- 오래 기록할 때(블루투스 등)는 tools/serial_log.py를 백그라운드로 돌려 logs/에 남긴다. 업로드하려면 먼저 그 기록 프로세스를 끝내야 한다(포트 점유).
 - 통과 기준: PocketHiFi boot, chip rev/cores/flash(4 MB 이상), free heap, 약 2초 간격 alive 출력.
 
 ## 개발 규칙
