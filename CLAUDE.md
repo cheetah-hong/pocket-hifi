@@ -43,10 +43,10 @@ pio run -t upload --upload-port /dev/cu.usbserial-0001
 - TFT_eSPI 핀은 platformio.ini build_flags에서 오므로, 화면을 쓰는 스케치는 static_assert로 pins.h와 같은지 확인한다.
 
 ### GitHub
-- 원격: https://github.com/cheetah-hong/pocket-hifi (public). 로컬 S2 브랜치 → 원격 main.
+- 원격: https://github.com/cheetah-hong/pocket-hifi (public). 로컬 cheetah-hong/S7 브랜치(S7 워크트리) → 원격 main. S6까지는 S2 워크트리의 S2 브랜치에서 푸시했다.
 - 단계를 통과할 때마다 커밋·태그 후 푸시한다. 커밋 메시지는 한글, Claude 관련 문구나 공동 작성자 표시를 넣지 않는다.
-- 브랜치 S2와 태그 s2는 macOS에서 이름이 겹치므로 refs/heads/S2, refs/tags/s2처럼 전체 이름을 쓴다.
-  예: `git push origin refs/heads/S2:refs/heads/main refs/tags/f2`
+- 브랜치와 태그 이름이 겹칠 수 있으므로(예: 예전 브랜치 S2와 태그 s2는 macOS에서 겹침) refs/heads/…, refs/tags/…처럼 전체 이름을 쓴다.
+  예: `git push origin refs/heads/cheetah-hong/S7:refs/heads/main refs/tags/f6`
 
 - pio 및 platformio는 ~/.local/bin에 연결되어 있고 ~/.zprofile에서 PATH에 추가했다.
 - 포트 재확인: `ls /dev/cu.*`, `pio device list`.
