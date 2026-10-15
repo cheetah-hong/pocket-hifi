@@ -14,8 +14,9 @@ static_assert(TFT_CS == PIN_TFT_CS && TFT_DC == PIN_TFT_DC && TFT_RST == PIN_TFT
 static_assert(TFT_MOSI == PIN_SPI_MOSI && TFT_SCLK == PIN_SPI_SCK && TFT_MISO == PIN_SPI_MISO,
               "platformio.ini SPI 핀이 pins.h와 다름");
 
-constexpr float START_VOLUME = 0.7f;  // DAC 잭 직결 기준(앰프는 V1로 연기). 0.1 → 0.3 → 0.7(사용자 확인)
-constexpr size_t START_TRACK = 1;     // 0부터 셈: 1 = 2번 트랙
+constexpr float START_VOLUME = 0.35f;  // DAC 잭 직결. 0.7의 절반(사용자 요청)
+constexpr size_t START_TRACK = 6;     // 0부터 셈: 6 = 7번 트랙(Out of Time)
+constexpr bool REPEAT_ONE = true;     // 한 곡만 반복(음색 비교용)
 constexpr uint32_t SD_FREQ_HZ = 20000000;
 constexpr const char *MUSIC_ROOT = "/music";
 constexpr uint8_t ROTATION_PORTRAIT = 0;
@@ -137,7 +138,7 @@ void loop() {
     return;
   }
   if (copier.copy() == 0 && current.available() == 0) {
-    openTrack(trackIndex + 1);  // 곡이 끝나면 다음 곡
+    openTrack(REPEAT_ONE ? trackIndex : trackIndex + 1);  // 곡이 끝나면 다음 곡(한 곡 반복이면 같은 곡)
   }
   if (millis() - lastStatusMs >= STATUS_INTERVAL_MS) {
     lastStatusMs = millis();
