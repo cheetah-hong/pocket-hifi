@@ -18,7 +18,7 @@ constexpr float START_VOLUME = 0.7f;  // DAC 잭 직결 기준(앰프는 V1로 �
 constexpr size_t START_TRACK = 1;     // 0부터 셈: 1 = 2번 트랙
 constexpr uint32_t SD_FREQ_HZ = 20000000;
 constexpr const char *MUSIC_ROOT = "/music";
-constexpr uint8_t ROTATION_LANDSCAPE = 1;
+constexpr uint8_t ROTATION_PORTRAIT = 0;
 constexpr uint32_t STATUS_INTERVAL_MS = 5000;
 
 TFT_eSPI tft;
@@ -108,7 +108,7 @@ void setup() {
   pinMode(PIN_SD_CS, OUTPUT);  // 화면 초기화 중 SD가 버스 신호를 받지 않게
   digitalWrite(PIN_SD_CS, HIGH);
   tft.init();
-  tft.setRotation(ROTATION_LANDSCAPE);
+  tft.setRotation(ROTATION_PORTRAIT);
   tft.fillScreen(TFT_BLACK);
   u8f.begin(tft);
   u8f.setFont(u8g2_font_unifont_t_korean2);

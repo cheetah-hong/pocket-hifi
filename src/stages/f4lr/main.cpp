@@ -9,7 +9,7 @@ static_assert(TFT_CS == PIN_TFT_CS && TFT_DC == PIN_TFT_DC && TFT_RST == PIN_TFT
               "platformio.ini TFT 핀이 pins.h와 다름");
 
 constexpr uint32_t SAMPLE_RATE = 44100;
-constexpr float TONE_VOLUME = 0.02f;  // 앰프 경로 진단용으로 아주 작게
+constexpr float TONE_VOLUME = 0.2f;  // DAC 잭 직결 진단용
 constexpr float LEFT_HZ = 440.0f;
 constexpr float RIGHT_HZ = 880.0f;
 constexpr uint32_t SIDE_MS = 2000;
@@ -54,7 +54,7 @@ void setup() {
   pinMode(PIN_SD_CS, OUTPUT);
   digitalWrite(PIN_SD_CS, HIGH);
   tft.init();
-  tft.setRotation(1);
+  tft.setRotation(0);  // 세로
   u8f.begin(tft);
   u8f.setFont(u8g2_font_unifont_t_korean2);
   u8f.setFontMode(1);

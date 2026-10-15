@@ -48,6 +48,7 @@ pio run -t upload --upload-port /dev/cu.usbserial-0001
 - 통과 기준: PocketHiFi boot, chip rev/cores/flash(4 MB 이상), free heap, 약 2초 간격 alive 출력.
 
 ## 개발 규칙
+- 화면 UI는 모두 세로 기준(setRotation 0, 240×320)으로 작성한다. 사용자가 화면을 세로로 고정해 쓴다.
 - 핀 번호는 src/pins.h에만 쓴다. 초기 platformio.ini의 TFT 설정은 사용자 제공 원문을 유지했다.
 - 단계마다 커밋하고 태그(f1, f2 …)를 붙인다.
 - 오디오 볼륨은 처음에 0.1로 시작한다.
