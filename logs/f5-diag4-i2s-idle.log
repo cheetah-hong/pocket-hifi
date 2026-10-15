@@ -1,0 +1,39 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13232
+load:0x40080400,len:3028
+entry 0x400805e4
+PocketHiFi F5 bluetooth -> buffer -> DAC
+[F5] 진단 4: I2S 무음 출력만, 출력 작업 없음
+[F5] 'PocketHiFi' 광고 시작, free heap 89232
+[F5] 연결 상태: Connecting
+[F5] 연결 상태: Connected
+[F5] AVRCP 0x01: 코카콜라
+[F5] AVRCP 0x02: Effie
+[F5] AVRCP 0x04: E
+[F5] 재생 상태: 재생
+[F5] AVRCP 0x01: 코카콜라
+[F5] AVRCP 0x02: Effie
+[F5] AVRCP 0x04: E
+[F5] AVRCP 0x01: Signs
+[F5] AVRCP 0x02: iiso
+[F5] AVRCP 0x04: Signs
+[F5] AVRCP 0x01: Signs
+[F5] AVRCP 0x02: iiso
+[F5] AVRCP 0x04: Signs
+[F5] AVRCP 0x01: down
+[F5] AVRCP 0x02: Effie
+[F5] AVRCP 0x04: E
+[F5] 재생 1분, 172 KB/s, 넘침 0 KB, 빔 0, heap 67928, 내부 최대 블록 47092
+[F5] 재생 2분, 172 KB/s, 넘침 0 KB, 빔 0, heap 66832, 내부 최대 블록 47092
+[F5] AVRCP 0x01: down
+[F5] AVRCP 0x02: Effie
+[F5] AVRCP 0x04: E
+[F5] AVRCP 0x01: MAKGEOLLI BANGER
+[F5] AVRCP 0x02: Effie
+[F5] AVRCP 0x04: pullup to busan 4 morE hypEr summEr it’s gonna bE a fuckin moviE

@@ -1,0 +1,111 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13232
+load:0x40080400,len:3028
+entry 0x400805e4
+PocketHiFi F5 bluetooth -> buffer -> DAC
+[F5] 'PocketHiFi' 광고 시작, free heap 65504
+[F5] 연결 상태: Connecting
+[F5] 샘플레이트 44100 Hz
+[F5] 연결 상태: Connected
+[F5] AVRCP 0x01: parasite
+[F5] AVRCP 0x02: tonser
+[F5] AVRCP 0x04: wolf
+[F5] 재생 상태: 재생
+[F5] AVRCP 0x01: parasite
+[F5] AVRCP 0x02: tonser
+[F5] AVRCP 0x04: wolf
+[F5] AVRCP 0x01: holdon
+[F5] AVRCP 0x02: Sion
+[F5] AVRCP 0x04: eigensinn
+[F5] AVRCP 0x01: holdon
+[F5] AVRCP 0x02: Sion
+[F5] AVRCP 0x04: eigensinn
+[F5] AVRCP 0x01: Melatonin
+[F5] AVRCP 0x02: Tinashe
+[F5] AVRCP 0x04: Popstar
+[F5] AVRCP 0x01: Melatonin
+[F5] AVRCP 0x02: Tinashe
+[F5] AVRCP 0x04: Popstar
+[F5] AVRCP 0x01: Crash Out
+[F5] AVRCP 0x02: Tinashe
+[F5] AVRCP 0x04: Popstar
+[F5] 재생 1분, 172 KB/s, 넘침 0 KB, 빔 28, heap 44460, 내부 최대 블록 22516
+[F5] 재생 2분, 172 KB/s, 넘침 0 KB, 빔 78, heap 44460, 내부 최대 블록 22516
+[F5] 재생 3분, 172 KB/s, 넘침 0 KB, 빔 99, heap 43460, 내부 최대 블록 22516
+[F5] AVRCP 0x01: Crash Out
+[F5] AVRCP 0x02: Tinashe
+[F5] AVRCP 0x04: Popstar
+[F5] AVRCP 0x01: Melatonin
+[F5] AVRCP 0x02: Tinashe
+[F5] AVRCP 0x04: Popstar
+[F5] 재생 4분, 172 KB/s, 넘침 0 KB, 빔 119, heap 43432, 내부 최대 블록 22516
+[F5] 재생 5분, 172 KB/s, 넘침 0 KB, 빔 173, heap 43460, 내부 최대 블록 22516
+[F5] 재생 6분, 172 KB/s, 넘침 0 KB, 빔 195, heap 44460, 내부 최대 블록 22516
+[F5] AVRCP 0x01: Melatonin
+[F5] AVRCP 0x02: Tinashe
+[F5] AVRCP 0x04: Popstar
+[F5] AVRCP 0x01: Baptized In Fear
+[F5] AVRCP 0x02: The Weeknd
+[F5] AVRCP 0x04: Hurry Up Tomorrow
+[F5] 재생 7분, 172 KB/s, 넘침 0 KB, 빔 241, heap 44460, 내부 최대 블록 22516
+[F5] 재생 8분, 172 KB/s, 넘침 0 KB, 빔 262, heap 44460, 내부 최대 블록 22516
+[F5] 재생 9분, 172 KB/s, 넘침 0 KB, 빔 280, heap 43432, 내부 최대 블록 22516
+[F5] 재생 10분, 172 KB/s, 넘침 0 KB, 빔 293, heap 44460, 내부 최대 블록 22516
+[F5] AVRCP 0x01: Baptized In Fear
+[F5] AVRCP 0x02: The Weeknd
+[F5] AVRCP 0x04: Hurry Up Tomorrow
+[F5] AVRCP 0x01: Open Hearts
+[F5] AVRCP 0x02: The Weeknd
+[F5] AVRCP 0x04: Hurry Up Tomorrow
+[F5] 재생 11분, 172 KB/s, 넘침 0 KB, 빔 323, heap 44460, 내부 최대 블록 22516
+[F5] 재생 12분, 172 KB/s, 넘침 0 KB, 빔 324, heap 44460, 내부 최대 블록 22516
+[F5] 재생 13분, 172 KB/s, 넘침 0 KB, 빔 332, heap 44460, 내부 최대 블록 22516
+[F5] 재생 14분, 172 KB/s, 넘침 0 KB, 빔 335, heap 44460, 내부 최대 블록 22516
+[F5] AVRCP 0x01: Open Hearts
+[F5] AVRCP 0x02: The Weeknd
+[F5] AVRCP 0x04: Hurry Up Tomorrow
+[F5] AVRCP 0x01: Wake Me Up (feat. Justice)
+[F5] AVRCP 0x02: The Weeknd, Justice
+[F5] AVRCP 0x04: Hurry Up Tomorrow
+[F5] 재생 15분, 176 KB/s, 넘침 0 KB, 빔 336, heap 44460, 내부 최대 블록 22516
+[F5] 재생 16분, 176 KB/s, 넘침 0 KB, 빔 337, heap 44460, 내부 최대 블록 22516
+[F5] 재생 17분, 172 KB/s, 넘침 0 KB, 빔 365, heap 44460, 내부 최대 블록 22516
+[F5] 재생 18분, 172 KB/s, 넘침 0 KB, 빔 365, heap 44460, 내부 최대 블록 22516
+[F5] 재생 19분, 172 KB/s, 넘침 0 KB, 빔 365, heap 44460, 내부 최대 블록 22516
+[F5] AVRCP 0x01: Wake Me Up (feat. Justice)
+[F5] AVRCP 0x02: The Weeknd, Justice
+[F5] AVRCP 0x04: Hurry Up Tomorrow
+[F5] AVRCP 0x01: After Hours
+[F5] AVRCP 0x02: The Weeknd
+[F5] AVRCP 0x04: After Hours
+[F5] 재생 20분, 176 KB/s, 넘침 0 KB, 빔 384, heap 44460, 내부 최대 블록 22516
+[F5] 재생 21분, 172 KB/s, 넘침 0 KB, 빔 384, heap 44460, 내부 최대 블록 22516
+[F5] 재생 22분, 172 KB/s, 넘침 0 KB, 빔 384, heap 44460, 내부 최대 블록 22516
+[F5] 재생 23분, 172 KB/s, 넘침 0 KB, 빔 397, heap 43460, 내부 최대 블록 22516
+[F5] 재생 24분, 172 KB/s, 넘침 0 KB, 빔 397, heap 44460, 내부 최대 블록 22516
+[F5] 재생 25분, 172 KB/s, 넘침 0 KB, 빔 407, heap 43460, 내부 최대 블록 22516
+[F5] AVRCP 0x01: After Hours
+[F5] AVRCP 0x02: The Weeknd
+[F5] AVRCP 0x04: After Hours
+[F5] AVRCP 0x01: Starboy
+[F5] AVRCP 0x02: The Weeknd, Daft Punk
+[F5] AVRCP 0x04: Starboy
+[F5] 재생 26분, 172 KB/s, 넘침 0 KB, 빔 408, heap 44460, 내부 최대 블록 22516
+[F5] 재생 27분, 172 KB/s, 넘침 0 KB, 빔 408, heap 44460, 내부 최대 블록 22516
+[F5] 재생 28분, 172 KB/s, 넘침 0 KB, 빔 408, heap 44460, 내부 최대 블록 22516
+[F5] 재생 29분, 172 KB/s, 넘침 0 KB, 빔 408, heap 44460, 내부 최대 블록 22516
+[F5] AVRCP 0x01: Starboy
+[F5] AVRCP 0x02: The Weeknd, Daft Punk
+[F5] AVRCP 0x04: Starboy
+[F5] AVRCP 0x01: Heartless
+[F5] AVRCP 0x02: The Weeknd
+[F5] AVRCP 0x04: After Hours
+[F5] 재생 30분, 172 KB/s, 넘침 0 KB, 빔 408, heap 43460, 내부 최대 블록 22516
+[F5] 재생 31분, 176 KB/s, 넘침 0 KB, 빔 408, heap 44460, 내부 최대 블록 22516
+[F5] 재생 32분, 176 KB/s, 넘침 0 KB, 빔 408, heap 44460, 내부 최대 블록 22516

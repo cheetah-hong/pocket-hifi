@@ -1,0 +1,54 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13232
+load:0x40080400,len:3028
+entry 0x400805e4
+PocketHiFi F5 bluetooth -> buffer -> DAC
+[F5] 'PocketHiFi' 광고 시작, free heap 81584
+[F5] 연결 상태: Connecting
+[F5] 샘플레이트 44100 Hz
+[F5] 연결 상태: Connected
+[F5] AVRCP 0x01: face2face
+[F5] AVRCP 0x02: Effie
+[F5] AVRCP 0x04: face2face
+[F5] 재생 상태: 재생
+[F5] AVRCP 0x01: put my hoodie on
+[F5] AVRCP 0x02: Effie
+[F5] AVRCP 0x04: E
+[F5] AVRCP 0x01: put my hoodie on
+[F5] AVRCP 0x02: Effie
+[F5] AVRCP 0x04: E
+[F5] AVRCP 0x01: SRRY♥
+[F5] AVRCP 0x02: Effie, The Deep
+[F5] AVRCP 0x04: SRRY♥
+[F5] 재생 1분, 148 KB/s, 넘침 0 KB, 빔 436, heap 60820
+[F5] 재생 2분, 132 KB/s, 넘침 0 KB, 빔 864, heap 58796
+[F5] AVRCP 0x01: SRRY♥
+[F5] AVRCP 0x02: Effie, The Deep
+[F5] AVRCP 0x04: SRRY♥
+[F5] AVRCP 0x01: MY UNNIES
+[F5] AVRCP 0x02: kimj, SEBii, The Deep, Effie
+[F5] AVRCP 0x04: MY UNNIES
+[F5] 재생 3분, 144 KB/s, 넘침 0 KB, 빔 1287, heap 59732
+[F5] 재생 4분, 144 KB/s, 넘침 0 KB, 빔 1727, heap 60820
+[F5] 재생 5분, 144 KB/s, 넘침 8 KB, 빔 2150, heap 60820
+[F5] AVRCP 0x01: MY UNNIES
+[F5] AVRCP 0x02: kimj, SEBii, The Deep, Effie
+[F5] AVRCP 0x04: MY UNNIES
+[F5] AVRCP 0x01: MORE HYPER
+[F5] AVRCP 0x02: Effie
+[F5] AVRCP 0x04: MORE HYPER
+[F5] 재생 6분, 144 KB/s, 넘침 8 KB, 빔 2557, heap 60820
+[F5] 재생 7분, 144 KB/s, 넘침 8 KB, 빔 2984, heap 60820
+[F5] AVRCP 0x01: MORE HYPER
+[F5] AVRCP 0x02: Effie
+[F5] AVRCP 0x04: MORE HYPER
+[F5] AVRCP 0x01: LET'S FIND A GOOD MANAGER
+[F5] AVRCP 0x02: Effie
+[F5] AVRCP 0x04: pullup to busan 4 morE hypEr summEr it’s gonna bE a fuckin moviE
+[F5] 재생 8분, 136 KB/s, 넘침 16 KB, 빔 3406, heap 60820
